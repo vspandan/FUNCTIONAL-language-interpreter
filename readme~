@@ -1,0 +1,27 @@
+Implementation of lexical language
+
+
+
+;;; ===========================================
+;;; Abstract Syntax for the language FUNCTIONAL
+;;; ===========================================
+
+
+
+;;; <ast> ::= <num-ast> |
+;;;           <bool-ast> |
+;;;           <id-ref-ast> |
+;;;           <ifte-ast> |
+;;;           <assume-ast> |
+;;;           <function-ast> |
+;;;           <app-ast>
+
+
+;;; <num-ast>  ::= (number <number>)
+;;; <bool-ast> ::= (boolean <boolean>)
+;;; <assume-ast>   ::=(assume ((<id> <ast>) ...) <ast>)
+;;; <id-ref-ast>   ::= (id-ref <id>)
+;;; <id>           ::= <symbol>
+;;; <ifte-ast>     ::= (ifte <ast> <ast> <ast>)
+;;; <function-ast> ::= (function (<id> ... ) <ast>)
+;;; <app-ast>      ::= (app  <ast>  <ast> ...)
